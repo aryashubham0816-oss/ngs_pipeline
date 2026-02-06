@@ -1,0 +1,157 @@
+Feb-06 15:19:38.826 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf
+Feb-06 15:19:38.996 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.10.3
+Feb-06 15:19:39.065 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/arya/.nextflow/plugins; core-plugins: nf-amazon@3.4.3,nf-azure@1.20.2,nf-cloudcache@0.5.0,nf-codecommit@0.5.0,nf-console@1.3.0,nf-google@1.23.4,nf-k8s@1.2.2,nf-tower@1.17.4,nf-wave@1.16.1
+Feb-06 15:19:39.115 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Feb-06 15:19:39.121 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Feb-06 15:19:39.129 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Feb-06 15:19:39.166 [main] DEBUG nextflow.util.RetryConfig - Missing nextflow session - using default retry config
+Feb-06 15:19:39.446 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Feb-06 15:19:39.540 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /mnt/e/next_flow_pipeline/nextflow.config
+Feb-06 15:19:39.550 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /mnt/e/next_flow_pipeline/nextflow.config
+Feb-06 15:19:39.621 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Feb-06 15:19:40.462 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Feb-06 15:19:40.463 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Feb-06 15:19:40.506 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/arya/.nextflow/secrets/store.json
+Feb-06 15:19:40.515 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@257e0827] - activable => nextflow.secret.LocalSecretsProvider@257e0827
+Feb-06 15:19:40.560 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+Feb-06 15:19:40.595 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [elated_curie] DSL2 - revision: 62c0e039d7
+Feb-06 15:19:40.713 [main] DEBUG nextflow.Session - Session UUID: 6ab66cd3-ecc6-4dc0-9ab4-bc75c0128af9
+Feb-06 15:19:40.714 [main] DEBUG nextflow.Session - Run name: elated_curie
+Feb-06 15:19:40.715 [main] DEBUG nextflow.Session - Executor pool size: 4
+Feb-06 15:19:40.743 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Feb-06 15:19:40.755 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=12; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Feb-06 15:19:40.800 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 25.10.3 build 10983
+  Created: 22-01-2026 15:34 UTC 
+  System: Linux 6.6.87.2-microsoft-standard-WSL2
+  Runtime: Groovy 4.0.28 on OpenJDK 64-Bit Server VM 17.0.14+1-b1367.22
+  Encoding: UTF-8 (UTF-8)
+  Process: 5718@Arya [127.0.1.1]
+  CPUs: 4 - Mem: 3.7 GB (282.6 MB) - Swap: 1 GB (1 GB)
+Feb-06 15:19:40.884 [main] DEBUG nextflow.Session - Work-dir: /mnt/e/next_flow_pipeline/work [v9fs]
+Feb-06 15:19:40.887 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /mnt/e/next_flow_pipeline/bin
+Feb-06 15:19:40.903 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Feb-06 15:19:40.921 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Feb-06 15:19:40.927 [main] DEBUG nextflow.Session - Observer factory (v2): DefaultObserverFactory
+Feb-06 15:19:41.013 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Feb-06 15:19:41.036 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 5; maxThreads: 1000
+Feb-06 15:19:41.465 [main] DEBUG nextflow.Session - Session start
+Feb-06 15:19:41.707 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Feb-06 15:19:42.899 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-06 15:19:42.901 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-06 15:19:42.929 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Feb-06 15:19:42.943 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=4; memory=3.7 GB; capacity=4; pollInterval=100ms; dumpInterval=5m
+Feb-06 15:19:42.950 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Feb-06 15:19:42.990 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'MY_PIPELINE_A:fastqc_raw_reads': maxForks=0; fair=false; array=0
+Feb-06 15:19:43.086 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-06 15:19:43.086 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-06 15:19:43.088 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'MY_PIPELINE_A:trim_fastq': maxForks=0; fair=false; array=0
+Feb-06 15:19:43.098 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-06 15:19:43.099 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-06 15:19:43.101 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'MY_PIPELINE_A:post_trim_qc': maxForks=0; fair=false; array=0
+Feb-06 15:19:43.111 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-06 15:19:43.113 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-06 15:19:43.116 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'MY_PIPELINE_A:read_alignment': maxForks=0; fair=false; array=0
+Feb-06 15:19:43.128 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-06 15:19:43.129 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-06 15:19:43.131 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'MY_PIPELINE_A:convert_sam_bam': maxForks=0; fair=false; array=0
+Feb-06 15:19:43.148 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-06 15:19:43.149 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-06 15:19:43.152 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'MY_PIPELINE_A:bam_sort_index': maxForks=0; fair=false; array=0
+Feb-06 15:19:43.165 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-06 15:19:43.166 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-06 15:19:43.168 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'MY_PIPELINE_A:variant_analysis': maxForks=0; fair=false; array=0
+Feb-06 15:19:43.234 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-06 15:19:43.235 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-06 15:19:43.238 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'MY_PIPELINE_A:multiqc_report': maxForks=0; fair=false; array=0
+Feb-06 15:19:43.246 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: multiqc_report, MY_PIPELINE_A:bam_sort_index, read_alignment, variant_analysis, MY_PIPELINE_A:fastqc_raw_reads, bam_sort_index, MY_PIPELINE_A:read_alignment, MY_PIPELINE_A:trim_fastq, MY_PIPELINE_A:post_trim_qc, MY_PIPELINE_A:multiqc_report, convert_sam_bam, trim_fastq, fastqc_raw_reads, post_trim_qc, MY_PIPELINE_A:variant_analysis, MY_PIPELINE_A:convert_sam_bam
+Feb-06 15:19:43.251 [main] DEBUG nextflow.Session - Igniting dataflow network (10)
+Feb-06 15:19:43.266 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > MY_PIPELINE_A:fastqc_raw_reads
+Feb-06 15:19:43.268 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > MY_PIPELINE_A:trim_fastq
+Feb-06 15:19:43.271 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > MY_PIPELINE_A:post_trim_qc
+Feb-06 15:19:43.272 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /mnt/e/next_flow_pipeline/data/; pattern: *.fastq; options: [checkIfExists:true]
+Feb-06 15:19:43.273 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > MY_PIPELINE_A:read_alignment
+Feb-06 15:19:43.274 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > MY_PIPELINE_A:convert_sam_bam
+Feb-06 15:19:43.276 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > MY_PIPELINE_A:bam_sort_index
+Feb-06 15:19:43.272 [PathVisitor-2] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /mnt/e/next_flow_pipeline/reference/; pattern: *.fa; options: [checkIfExists:true]
+Feb-06 15:19:43.277 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > MY_PIPELINE_A:variant_analysis
+Feb-06 15:19:43.279 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > MY_PIPELINE_A:multiqc_report
+Feb-06 15:19:43.281 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_42b82fad0c6fa3c5: /mnt/e/next_flow_pipeline/modules/convert_sam_bam.nf
+  Script_88423075dab5ddd8: /mnt/e/next_flow_pipeline/modules/variant_analysis.nf
+  Script_afbad9ed31fdab72: /mnt/e/next_flow_pipeline/modules/bam_sort_index.nf
+  Script_aaad621da1c0446e: /mnt/e/next_flow_pipeline/modules/fastqc_raw_reads.nf
+  Script_419c1f3bda958a2c: /mnt/e/next_flow_pipeline/modules/multiqc_report.nf
+  Script_6844cb059eb90557: /mnt/e/next_flow_pipeline/main.nf
+  Script_9262bef63accd17b: /mnt/e/next_flow_pipeline/modules/trim_fastq.nf
+  Script_a1eae75b8e02c4e1: /mnt/e/next_flow_pipeline/modules/read_alignment.nf
+  Script_77ffa53d1d49e1e4: /mnt/e/next_flow_pipeline/modules/post_trim_qc.nf
+  Script_a3f190680eea15cb: /mnt/e/next_flow_pipeline/workflows/workflow.nf
+Feb-06 15:19:43.282 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Feb-06 15:19:43.286 [main] DEBUG nextflow.Session - Session await
+Feb-06 15:19:43.626 [Task submitter] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=MY_PIPELINE_A:fastqc_raw_reads (1); work-dir=/mnt/e/next_flow_pipeline/work/b8/caae48454af7852f793195857eb8ca
+  error [nextflow.exception.ProcessUnrecoverableException]: Process requirement exceeds available memory -- req: 4 GB; avail: 3.7 GB
+Feb-06 15:19:43.673 [Task submitter] DEBUG nextflow.processor.TaskRun - Unable to dump error of process 'null' -- Cause: java.nio.file.NoSuchFileException: /mnt/e/next_flow_pipeline/work/b8/caae48454af7852f793195857eb8ca/.command.log
+Feb-06 15:19:43.681 [Task submitter] ERROR nextflow.processor.TaskProcessor - Error executing process > 'MY_PIPELINE_A:fastqc_raw_reads (1)'
+
+Caused by:
+  Process requirement exceeds available memory -- req: 4 GB; avail: 3.7 GB
+
+
+Command executed:
+
+  /home/arya/miniconda3/envs/bnf/bin/fastqc Sample1.fasta.fastq
+
+Command exit status:
+  -
+
+Command output:
+  (empty)
+
+Work dir:
+  /mnt/e/next_flow_pipeline/work/b8/caae48454af7852f793195857eb8ca
+
+Tip: view the complete command output by changing to the process work dir and entering the command `cat .command.out`
+Feb-06 15:19:43.688 [Task submitter] DEBUG nextflow.Session - Session aborted -- Cause: Process requirement exceeds available memory -- req: 4 GB; avail: 3.7 GB
+Feb-06 15:19:43.727 [Task submitter] DEBUG nextflow.Session - The following nodes are still active:
+[process] MY_PIPELINE_A:post_trim_qc
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: trimmed
+  port 1: (cntrl) -     ; channel: $
+
+[process] MY_PIPELINE_A:read_alignment
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: trimmed
+  port 1: (queue) OPEN  ; channel: ref
+  port 2: (cntrl) -     ; channel: $
+
+[process] MY_PIPELINE_A:convert_sam_bam
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: sam
+  port 1: (cntrl) -     ; channel: $
+
+[process] MY_PIPELINE_A:bam_sort_index
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: bam
+  port 1: (cntrl) -     ; channel: $
+
+[process] MY_PIPELINE_A:variant_analysis
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: bam
+  port 1: (queue) OPEN  ; channel: bai
+  port 2: (queue) OPEN  ; channel: ref
+  port 3: (cntrl) -     ; channel: $
+
+[process] MY_PIPELINE_A:multiqc_report
+  status=ACTIVE
+  port 0: (value) OPEN  ; channel: *
+  port 1: (cntrl) -     ; channel: $
+
+Feb-06 15:19:43.741 [Task submitter] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=2; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=0; peakCpus=0; peakMemory=0; ]
+Feb-06 15:19:43.764 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Feb-06 15:19:43.906 [main] DEBUG nextflow.Session - Session await > all processes finished
+Feb-06 15:19:43.906 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Feb-06 15:19:43.908 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=2; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=0; peakCpus=0; peakMemory=0; ]
+Feb-06 15:19:44.016 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Feb-06 15:19:44.071 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
